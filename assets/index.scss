@@ -4,10 +4,10 @@
     url(@/assets/Onest_400/Onest-Regular.woff) format("truetype");
 }
 @font-face {
-    font-family: "OnestBlack";
-    src: local("fontBlack"),
-      url(@/assets/fontBlack/Onest-Black.woff) format("truetype");
-  }
+  font-family: "OnestBlack";
+  src: local("fontBlack"),
+    url(@/assets/fontBlack/Onest-Black.woff) format("truetype");
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Inter:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@400;700&family=Nunito&family=Open+Sans:wght@400;700&family=PT+Sans+Caption&family=Poppins:wght@400;700&family=Roboto:wght@700&display=swap");
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -151,7 +151,7 @@ ul {
     font-size: 18px;
     gap: 60px;
     padding: 20px 56px;
-    margin-top: 64px;
+    margin-bottom: 150px;
   }
   &__benefit__free {
     display: flex;
@@ -168,6 +168,7 @@ ul {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    margin-bottom: 64px;
   }
   &__product__nav {
     display: flex;
@@ -218,6 +219,9 @@ ul {
     font-size: 18px;
     color: #00284f;
     font-weight: 400;
+  }
+  &__description_btn {
+    display: none;
   }
   &__pills {
     display: flex;
@@ -389,3 +393,201 @@ ul {
 .carousel-control-next {
   display: none;
 }
+.btn-success-mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  svg {
+    overflow: inherit;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .main {
+    &__product {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+    &__img {
+      gap: 40px;
+    }
+    &__benefit {
+      gap: 50px;
+      padding: 94px 27px;
+    }
+    &__benefit__free {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    &__product {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+    &__arrows {
+      display: none;
+    }
+    &__carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .carousel-control-prev {
+    display: flex;
+  }
+  .carousel-control-next {
+    display: flex;
+  }
+}
+
+@media (max-width: 610px) {
+  .navigation {
+    display: none;
+  }
+  .main {
+    &__title__elements {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 4px;
+      padding-bottom: 24px;
+    }
+    &__product {
+      margin-bottom: 34px;
+    }
+    &__product__nav {
+      font-size: 11px;
+    }
+    &__vitamin {
+      font-size: 16px;
+      width: 250px;
+      padding: 2px 19px;
+    }
+    &__pills {
+      padding-bottom: 0px;
+    }
+    &__pills__price {
+      display: none;
+    }
+    &__box {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 32px;
+    }
+    &__benefit {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 20px;
+      gap: 20px;
+      padding: 33px;
+    }
+    &__benefit__free {
+      flex-direction: row;
+      gap: 45px;
+      text-align: start !important;
+    }
+    &__benefit__free-text {
+      font-size: 16px;
+      width: 219px;
+      text-align: start !important;
+      float: left;
+    }
+    &__description {
+      padding-bottom: 8px;
+    }
+    &__description_btn {
+      display: block;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid black;
+      color: black;
+      padding: 4px;
+      margin-bottom: 28px;
+    }
+    .counter {
+      display: none;
+    }
+    .carousel {
+      margin-top: 24px;
+    }
+  }
+  .nav__link_btn {
+    padding-bottom: 0;
+  }
+  .btn-success {
+    display: none;
+  }
+  .btn-success-mobile {
+    display: block;
+    background-color: #69c522;
+    border: none;
+    border-radius: 40px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 17px 0px;
+  }
+  .b-form-spinbutton,
+  .form-control {
+    display: none;
+  }
+}
+
+.carousel-control-prev-icon {
+  background-image: url(@/assets/imgs/arrow_left.svg);
+}
+.carousel-control-next-icon {
+  background-image: url(@/assets/imgs/arrow_right.svg);
+}
+
+@media (max-width: 400px) {
+  .header__logosvg {
+    width: 120px !important;
+    color: #00284f;
+  }
+  .header__burger {
+    display: flex;
+    align-items: center;
+    grid-gap: 40px;
+    gap: 12px;
+  }
+  .header__cart {
+    gap: 12px;
+  }
+  .span {
+    min-height: 14px;
+    min-width: 16px;
+    position: absolute;
+    margin-left: 50px;
+    padding: 2px;
+  }
+  .main {
+    &__img {
+      width: 285px;
+      height: 225px;
+    }
+    &__slide {
+      width: 285px;
+      height: 225px;
+    }
+    &__product__nav {
+      grid-gap: 15px;
+      gap: 15px;
+    }
+    &__benefit__free-text {
+      text-align: start;
+    }
+  }
+}
+@media (max-width: 374px) {
+  
+  }

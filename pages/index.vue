@@ -87,8 +87,8 @@ import AppLogo from '~/components/AppLogo.vue'
                 fill="#1D1D1B"
               />
             </svg>
-          </div>
-          <svg
+          </div> 
+          <svg class="header__logosg"
             width="196"
             height="32"
             viewBox="0 0 196 32"
@@ -278,6 +278,8 @@ import AppLogo from '~/components/AppLogo.vue'
                   здоров'я твоєї шкіри, волосся, зору, сну, міцних кісток,
                   суглобів та імунітету.
                 </p>
+                <button class="main__description_btn">Дізнатись більше</button>
+                <div class="main__box">
                 <div class="main__pills">
                   <div class="main__pills__description">
                     <svg
@@ -328,11 +330,12 @@ import AppLogo from '~/components/AppLogo.vue'
                   </div>
                 </div>
                 <div class="main__add">
+                  <div class="counter">
                   <div
                     role="group"
                     lang="ru"
                     tabindex="-1"
-                    class="b-form-spinbutton form-control d-inline-flex align-items-stretch"
+                    class="b-form-spinbutton form-control d-inline-flex align-items-stretch "
                   >
                     <button
                       tabindex="-1"
@@ -408,7 +411,7 @@ import AppLogo from '~/components/AppLogo.vue'
                         </g>
                       </svg>
                     </button>
-                  </div>
+                  </div></div>
                   <button
                     type="button"
                     tabindex="0"
@@ -418,27 +421,29 @@ import AppLogo from '~/components/AppLogo.vue'
                   >
                     До кошика
                   </button>
-                </div>
+                   <button
+                    type="button"
+                    tabindex="0"
+                    class="btn btn-success-mobile"
+                    data-bs-toggle="button"
+                    @click="addToBag($event)"
+                  >
+                    До кошика — 489 ₴
+                  </button>
+                </div></div>
               </div>
             </div>
             <div v-if="currentTab == 'benefit'">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque,
-              voluptatibus?
+              voluptatibus? Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus modi adipisci laboriosam, eaque animi ullam vero quibusdam.
             </div>
-            <div v-if="currentTab == 'ingredients'">Hello</div>
-            <div v-if="currentTab == 'use'">Hello</div>
+            <div v-if="currentTab == 'ingredients'">Hello <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolorem?</div>
+            <div v-if="currentTab == 'use'">Hello <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolorem?</div>
           </div>
         </div>
         <div class="main__img">
-          <b-carousel
-            v-model="slide"
-            id="carousel-1"
-            ref="pillsImges"
-            background="transparent"
-            no-wrap
-            style="text-shadow: 1px 1px 2px #333"
-          >
-            <a
+          <div class="main__carousel">
+              <a
               href="#"
               role="button"
               aria-controls="carousel-1___BV_inner_"
@@ -450,6 +455,15 @@ import AppLogo from '~/components/AppLogo.vue'
                 @click="onPrevSlide"
               ></span
             ></a>
+          <b-carousel
+            v-model="slide"
+            id="carousel-1"
+            ref="pillsImges"
+            background="transparent"
+            no-wrap
+            style="text-shadow: 1px 1px 2px #333"
+          >
+        
             <b-carousel-slide
               class="main__slide"
               img-src="@/assets/imgs/1_cod.png"
@@ -471,7 +485,9 @@ import AppLogo from '~/components/AppLogo.vue'
               class="main__slide"
               img-src="@/assets/imgs/5_cod.png"
             ></b-carousel-slide>
-            <a
+
+          </b-carousel>
+           <a
               href="#"
               role="button"
               aria-controls="carousel-1___BV_inner_"
@@ -482,8 +498,7 @@ import AppLogo from '~/components/AppLogo.vue'
                 class="carousel-control-next-icon"
                 @click="onNextSlide"
               ></span
-            ></a>
-          </b-carousel>
+            ></a> </div>
           <div class="main__arrows">
             <svg
               v-if="slide != 0"
@@ -545,6 +560,9 @@ import AppLogo from '~/components/AppLogo.vue'
             </svg>
           </div>
         </div>
+
+
+        
       </div>
 
       <div class="main__benefit">
