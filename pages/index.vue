@@ -88,7 +88,7 @@ import AppLogo from '~/components/AppLogo.vue'
               />
             </svg>
           </div> 
-          <svg class="header__logosg"
+          <svg class="header__logosvg"
             width="196"
             height="32"
             viewBox="0 0 196 32"

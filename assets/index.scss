@@ -149,7 +149,7 @@ ul {
     border-radius: 15px;
     color: #00284f;
     font-size: 18px;
-    gap: 60px;
+    gap: 38px;
     padding: 20px 56px;
     margin-bottom: 150px;
   }
@@ -157,8 +157,10 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: 14px;
     height: 48px;
+    text-align: left;
+    flex-direction: row;
   }
   &__benefit__free-text {
     font-size: 18px;
@@ -278,6 +280,7 @@ ul {
     gap: 74px;
   }
   &__img {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 74px;
@@ -370,8 +373,9 @@ ul {
   border-radius: 40px;
   width: 416px;
 }
-.svg {
+svg {
   position: relative;
+  overflow: visible;
 }
 .span {
   min-height: 26px;
@@ -442,9 +446,15 @@ ul {
   }
   .carousel-control-prev {
     display: flex;
+    position: absolute;
+    left: -30%;
+    right: 0px;
   }
   .carousel-control-next {
     display: flex;
+    position: absolute;
+    left: 110%;
+    right: 0;
   }
 }
 
@@ -493,12 +503,11 @@ ul {
     &__benefit__free {
       flex-direction: row;
       gap: 45px;
-      text-align: start !important;
+      text-align: left;
     }
     &__benefit__free-text {
       font-size: 16px;
       width: 219px;
-      text-align: start !important;
       float: left;
     }
     &__description {
@@ -518,6 +527,18 @@ ul {
     }
     .carousel {
       margin-top: 24px;
+    }
+    .carousel-control-prev {
+      display: flex;
+      position: absolute;
+      left: -10%;
+      right: 0px;
+    }
+    .carousel-control-next {
+      display: flex;
+      position: absolute;
+      left: 100%;
+      right: 0;
     }
   }
   .nav__link_btn {
@@ -549,7 +570,7 @@ ul {
   background-image: url(@/assets/imgs/arrow_right.svg);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 470px) {
   .header__logosvg {
     width: 120px !important;
     color: #00284f;
@@ -586,6 +607,18 @@ ul {
     &__benefit__free-text {
       text-align: start;
     }
+  }
+  .carousel-control-prev {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    right: 0;
+  }
+  .carousel-control-next {
+    display: flex;
+    position: absolute;
+    left: 1%;
+    right: 0;
   }
 }
 @media (max-width: 374px) {
