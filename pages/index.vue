@@ -273,12 +273,17 @@ import AppLogo from '~/components/AppLogo.vue'
                 role="tabpanel"
                 aria-labelledby="nav-home-tab"
               >
-                <p class="main__description">
+              <div class="main__shorte" v-if="isCollapsed == false">
+                <p class="main__description" >
                   Комплекс EPA + DHA кислот і натуральних вітамінів А & D3 для
-                  здоров'я твоєї шкіри, волосся, зору, сну, міцних кісток,
-                  суглобів та імунітету.
+                  здоров'я твоєї шкіри...
                 </p>
-                <button class="main__description_btn">Дізнатись більше</button>
+                <button class="main__description_btn" @click="isCollapsed = true">Дізнатись більше</button></div>
+                <div class="main__full" v-else>
+                  <p class="main__description">
+                  Комплекс EPA + DHA кислот і натуральних вітамінів А & D3 для здоров'я твоєї шкіри, волосся, зору, сну, міцних кісток, суглобів та імунітету.
+                </p>
+                </div>
                 <div class="main__box">
                 <div class="main__pills">
                   <div class="main__pills__description">
@@ -664,10 +669,11 @@ import AppLogo from '~/components/AppLogo.vue'
 export default {
   data() {
     return {
-        itemCount: 0,
+        itemCount: 1,
         bagCount: 0,
         currentTab: 'description',
         slide: 0,
+        isCollapsed: false,
       }
     },
   components: {
@@ -686,7 +692,7 @@ export default {
     },
     addToBag(event) {
       this.bagCount += this.itemCount
-      this.itemCount = 0
+      this.itemCount = 1
       event.target.blur()
     },
     onPrevSlide() {
