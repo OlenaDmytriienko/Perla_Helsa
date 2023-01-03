@@ -273,7 +273,7 @@ import AppLogo from '~/components/AppLogo.vue'
                 role="tabpanel"
                 aria-labelledby="nav-home-tab"
               >
-              <div class="main__shorte" v-if="isCollapsed == false">
+              <div class="main__shorte" v-if="isCollapsed == false && isMobile == true">
                 <p class="main__description" >
                   Комплекс EPA + DHA кислот і натуральних вітамінів А & D3 для
                   здоров'я твоєї шкіри...
@@ -439,11 +439,489 @@ import AppLogo from '~/components/AppLogo.vue'
               </div>
             </div>
             <div v-if="currentTab == 'benefit'">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque,
-              voluptatibus? Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus modi adipisci laboriosam, eaque animi ullam vero quibusdam.
+              <div class="main__benefit__box main__description">
+              <ul>
+                <li>Покращують стан шкіри: борються з акне та сприяють її регенерації</li>
+                <li>Зменшують випадіння волосся, стимулюють його ріст</li>
+                <li>Підіймають настрій та полегшують симптоми депресії</li>
+                <li>Зміцнюють імунітет: зменшують запальні процеси</li>
+                <li>Поліпшують роботу гормонів, серця і ЦНС</li>
+                <li>Зменшують болі в суглобах</li>
+                <li>Покращують метаболізм і роботу ШКТ</li>
+              </ul></div>
+                <div class="main__box">
+                <div class="main__pills">
+                  <div class="main__pills__description">
+                    <svg
+                      width="44"
+                      height="45"
+                      viewBox="0 0 44 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9259 16.5901C16.9991 12.5356 24.6331 13.3771 31.1656 18.1711C32.1647 14.0656 31.5498 10.1897 29.0393 7.69069C24.3257 2.99874 14.7959 4.86022 7.77672 11.8471C0.757496 18.834 -1.11259 28.3199 3.60105 33.0119C6.21404 35.6128 10.3385 36.1993 14.6679 35.0008C9.69804 28.4474 8.80142 20.6955 12.9259 16.5901Z"
+                        stroke="#00284F"
+                        stroke-miterlimit="10"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M14.6938 35.0004C15.4111 35.9439 16.2309 36.8619 17.1019 37.7544C24.1211 44.7413 33.6509 46.6028 38.3645 41.9109C43.0781 37.2189 41.2081 27.733 34.1888 20.7461C33.2154 19.7771 32.2163 18.9356 31.166 18.1706"
+                        stroke="#00284F"
+                        stroke-miterlimit="10"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M31.1656 18.1714C24.6331 13.3775 16.9991 12.536 12.9259 16.5904C8.80146 20.6959 9.69807 28.4478 14.6935 35.0012"
+                        stroke="#00284F"
+                        stroke-miterlimit="10"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M39.2864 7.71667L39.3376 7.89517C40.0805 10.4706 41.7457 12.4851 43.8719 13.4031L44 13.4541C41.7713 14.3466 40.0037 16.4631 39.2608 19.1915L39.2095 19.013C38.4666 16.4376 36.8015 14.4231 34.6752 13.5051L34.5471 13.4541C36.7759 12.5361 38.5435 10.4196 39.2864 7.71667Z"
+                        fill="#69C522"
+                      />
+                      <path
+                        d="M34.4191 0.5L34.4447 0.601999C34.8546 1.97898 35.7512 3.07547 36.8784 3.55996L36.9552 3.58546C35.7512 4.06996 34.829 5.21744 34.4191 6.64542L34.3935 6.54343C33.9836 5.19194 33.087 4.09546 31.9598 3.61096L31.8829 3.58546C33.087 3.10097 34.0092 1.95348 34.4191 0.5Z"
+                        fill="#69C522"
+                      />
+                    </svg>
+                    <div class="main__pills__description-text">
+                      <p><b>В упаковці:</b></p>
+                      <p>120 капсул по 500 мг</p>
+                      <p class="main__pills__description-faded">
+                        1 місяць прийому
+                      </p>
+                    </div>
+                  </div>
+                  <div class="main__pills__price">
+                    <p class="main__pills__price-old">963 ₴</p>
+                    <p class="main__pills__price-new">489 ₴</p>
+                  </div>
+                </div>
+                <div class="main__add">
+                  <div class="counter">
+                  <div
+                    role="group"
+                    lang="ru"
+                    tabindex="-1"
+                    class="b-form-spinbutton form-control d-inline-flex align-items-stretch "
+                  >
+                    <button
+                      tabindex="-1"
+                      type="button"
+                      aria-controls="sb-inline"
+                      aria-label="Decrement"
+                      aria-keyshortcuts="ArrowDown"
+                      class="btn btn-sm border-0 rounded-0 py-0"
+                      @click="onDecrementItem"
+                    >
+                      <svg
+                        viewBox="0 0 16 16"
+                        width="1em"
+                        height="1em"
+                        focusable="false"
+                        role="img"
+                        aria-label="dash"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi-dash b-icon bi"
+                      >
+                        <g
+                          transform="translate(8 8) scale(1.25 1.25) translate(-8 -8)"
+                        >
+                          <path
+                            d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                    <input 
+                      v-model.number="itemCount" 
+                      v-on:keypress="checkNumbersOnly" 
+                      @paste.prevent 
+                      class="flex-grow-1 align-self-center main__inp" 
+                    />
+                    <button
+                      tabindex="-1"
+                      type="button"
+                      aria-controls="sb-inline"
+                      aria-label="Increment"
+                      aria-keyshortcuts="ArrowUp"
+                      class="btn btn-sm border-0 rounded-0 py-0"
+                      @click="onIncrementItem"
+                    >
+                      <svg
+                        viewBox="0 0 16 16"
+                        width="1em"
+                        height="1em"
+                        focusable="false"
+                        role="img"
+                        aria-label="plus"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi-plus b-icon bi"
+                      >
+                        <g
+                          transform="translate(8 8) scale(1.25 1.25) translate(-8 -8)"
+                        >
+                          <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                  </div></div>
+                  <button
+                    type="button"
+                    tabindex="0"
+                    class="btn btn-success"
+                    data-bs-toggle="button"
+                    @click="addToBag($event)"
+                  >
+                    До кошика
+                  </button>
+                   <button
+                    type="button"
+                    tabindex="0"
+                    class="btn btn-success-mobile"
+                    data-bs-toggle="button"
+                    @click="addToBag($event)"
+                  >
+                    До кошика — 489 ₴
+                  </button>
+                </div></div>
             </div>
-            <div v-if="currentTab == 'ingredients'">Hello <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolorem?</div>
-            <div v-if="currentTab == 'use'">Hello <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolorem?</div>
+            <div v-if="currentTab == 'ingredients'">
+          <div  class="main__description main__ingredients__box flexbe-table">
+<table class="table table-hover">
+  <tbody>
+    <tr>
+      <td scope="row" colspan="3"><strong>Склад:</strong></td>
+      <td><p class="main__table">100% риб'ячий жир з печінки тріски, желатин, гліцерин.</p></td>
+    </tr>
+    <tr>
+      <td  scope="row"  colspan="3"><strong>EPA / DHA</strong></td>
+      <td><p class="main__table">170 мг / 205 мг</p></td>
+    </tr>
+    <tr>
+      <td scope="row" colspan="3"><strong>Вітамін-А</strong></td>
+      <td><p class="main__table">656 мкг 2187&nbsp;МО</p></td>
+    </tr>
+        <tr>
+      <td scope="row" colspan="3"><strong>Вітамін-D3</strong></td>
+      <td><p class="main__table">5.2 мкг 210&nbsp;МО</p></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<div class="main__box">
+                <div class="main__pills">
+                  <div class="main__pills__description">
+                    <svg
+                      width="44"
+                      height="45"
+                      viewBox="0 0 44 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9259 16.5901C16.9991 12.5356 24.6331 13.3771 31.1656 18.1711C32.1647 14.0656 31.5498 10.1897 29.0393 7.69069C24.3257 2.99874 14.7959 4.86022 7.77672 11.8471C0.757496 18.834 -1.11259 28.3199 3.60105 33.0119C6.21404 35.6128 10.3385 36.1993 14.6679 35.0008C9.69804 28.4474 8.80142 20.6955 12.9259 16.5901Z"
+                        stroke="#00284F"
+                        stroke-miterlimit="10"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M14.6938 35.0004C15.4111 35.9439 16.2309 36.8619 17.1019 37.7544C24.1211 44.7413 33.6509 46.6028 38.3645 41.9109C43.0781 37.2189 41.2081 27.733 34.1888 20.7461C33.2154 19.7771 32.2163 18.9356 31.166 18.1706"
+                        stroke="#00284F"
+                        stroke-miterlimit="10"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M31.1656 18.1714C24.6331 13.3775 16.9991 12.536 12.9259 16.5904C8.80146 20.6959 9.69807 28.4478 14.6935 35.0012"
+                        stroke="#00284F"
+                        stroke-miterlimit="10"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M39.2864 7.71667L39.3376 7.89517C40.0805 10.4706 41.7457 12.4851 43.8719 13.4031L44 13.4541C41.7713 14.3466 40.0037 16.4631 39.2608 19.1915L39.2095 19.013C38.4666 16.4376 36.8015 14.4231 34.6752 13.5051L34.5471 13.4541C36.7759 12.5361 38.5435 10.4196 39.2864 7.71667Z"
+                        fill="#69C522"
+                      />
+                      <path
+                        d="M34.4191 0.5L34.4447 0.601999C34.8546 1.97898 35.7512 3.07547 36.8784 3.55996L36.9552 3.58546C35.7512 4.06996 34.829 5.21744 34.4191 6.64542L34.3935 6.54343C33.9836 5.19194 33.087 4.09546 31.9598 3.61096L31.8829 3.58546C33.087 3.10097 34.0092 1.95348 34.4191 0.5Z"
+                        fill="#69C522"
+                      />
+                    </svg>
+                    <div class="main__pills__description-text">
+                      <p><b>В упаковці:</b></p>
+                      <p>120 капсул по 500 мг</p>
+                      <p class="main__pills__description-faded">
+                        1 місяць прийому
+                      </p>
+                    </div>
+                  </div>
+                  <div class="main__pills__price">
+                    <p class="main__pills__price-old">963 ₴</p>
+                    <p class="main__pills__price-new">489 ₴</p>
+                  </div>
+                </div>
+                <div class="main__add">
+                  <div class="counter">
+                  <div
+                    role="group"
+                    lang="ru"
+                    tabindex="-1"
+                    class="b-form-spinbutton form-control d-inline-flex align-items-stretch "
+                  >
+                    <button
+                      tabindex="-1"
+                      type="button"
+                      aria-controls="sb-inline"
+                      aria-label="Decrement"
+                      aria-keyshortcuts="ArrowDown"
+                      class="btn btn-sm border-0 rounded-0 py-0"
+                      @click="onDecrementItem"
+                    >
+                      <svg
+                        viewBox="0 0 16 16"
+                        width="1em"
+                        height="1em"
+                        focusable="false"
+                        role="img"
+                        aria-label="dash"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi-dash b-icon bi"
+                      >
+                        <g
+                          transform="translate(8 8) scale(1.25 1.25) translate(-8 -8)"
+                        >
+                          <path
+                            d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                    <!-- <output
+                      dir="ltr"
+                      id="sb-inline"
+                      role="spinbutton"
+                      tabindex="0"
+                      class="flex-grow-1 align-self-center"
+                      ><bdi>{{itemCount}}</bdi></output
+                    > -->
+                    <input 
+                      v-model.number="itemCount" 
+                      v-on:keypress="checkNumbersOnly" 
+                      @paste.prevent 
+                      class="flex-grow-1 align-self-center main__inp" 
+                    />
+                    <button
+                      tabindex="-1"
+                      type="button"
+                      aria-controls="sb-inline"
+                      aria-label="Increment"
+                      aria-keyshortcuts="ArrowUp"
+                      class="btn btn-sm border-0 rounded-0 py-0"
+                      @click="onIncrementItem"
+                    >
+                      <svg
+                        viewBox="0 0 16 16"
+                        width="1em"
+                        height="1em"
+                        focusable="false"
+                        role="img"
+                        aria-label="plus"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi-plus b-icon bi"
+                      >
+                        <g
+                          transform="translate(8 8) scale(1.25 1.25) translate(-8 -8)"
+                        >
+                          <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                  </div></div>
+                  <button
+                    type="button"
+                    tabindex="0"
+                    class="btn btn-success"
+                    data-bs-toggle="button"
+                    @click="addToBag($event)"
+                  >
+                    До кошика
+                  </button>
+                   <button
+                    type="button"
+                    tabindex="0"
+                    class="btn btn-success-mobile"
+                    data-bs-toggle="button"
+                    @click="addToBag($event)"
+                  >
+                    До кошика — 489 ₴
+                  </button>
+                </div></div>
+              </div>
+            <div v-if="currentTab == 'use'">
+              <div class="main__description">
+                <p class="main__use">Для профілактики, дорослим і дітям від 11 років –&nbsp;<em><strong>4 капсули на день</strong></em>, разом із їжею або одразу після.&nbsp;Бажано з іншими жирами <em>для кращого засвоєння</em>.</p>
+                <p><strong>Курс прийому:</strong>&nbsp;2-3 місяці, після чого зробити перерву 1-2 місяці або перейти на Омега-3 із Тунця.</p>
+              </div>
+              <div class="main__box">
+                <div class="main__pills">
+                  <div class="main__pills__description">
+                    <svg
+                      width="44"
+                      height="45"
+                      viewBox="0 0 44 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9259 16.5901C16.9991 12.5356 24.6331 13.3771 31.1656 18.1711C32.1647 14.0656 31.5498 10.1897 29.0393 7.69069C24.3257 2.99874 14.7959 4.86022 7.77672 11.8471C0.757496 18.834 -1.11259 28.3199 3.60105 33.0119C6.21404 35.6128 10.3385 36.1993 14.6679 35.0008C9.69804 28.4474 8.80142 20.6955 12.9259 16.5901Z"
+                        stroke="#00284F"
+                        stroke-miterlimit="10"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M14.6938 35.0004C15.4111 35.9439 16.2309 36.8619 17.1019 37.7544C24.1211 44.7413 33.6509 46.6028 38.3645 41.9109C43.0781 37.2189 41.2081 27.733 34.1888 20.7461C33.2154 19.7771 32.2163 18.9356 31.166 18.1706"
+                        stroke="#00284F"
+                        stroke-miterlimit="10"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M31.1656 18.1714C24.6331 13.3775 16.9991 12.536 12.9259 16.5904C8.80146 20.6959 9.69807 28.4478 14.6935 35.0012"
+                        stroke="#00284F"
+                        stroke-miterlimit="10"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M39.2864 7.71667L39.3376 7.89517C40.0805 10.4706 41.7457 12.4851 43.8719 13.4031L44 13.4541C41.7713 14.3466 40.0037 16.4631 39.2608 19.1915L39.2095 19.013C38.4666 16.4376 36.8015 14.4231 34.6752 13.5051L34.5471 13.4541C36.7759 12.5361 38.5435 10.4196 39.2864 7.71667Z"
+                        fill="#69C522"
+                      />
+                      <path
+                        d="M34.4191 0.5L34.4447 0.601999C34.8546 1.97898 35.7512 3.07547 36.8784 3.55996L36.9552 3.58546C35.7512 4.06996 34.829 5.21744 34.4191 6.64542L34.3935 6.54343C33.9836 5.19194 33.087 4.09546 31.9598 3.61096L31.8829 3.58546C33.087 3.10097 34.0092 1.95348 34.4191 0.5Z"
+                        fill="#69C522"
+                      />
+                    </svg>
+                    <div class="main__pills__description-text">
+                      <p><b>В упаковці:</b></p>
+                      <p>120 капсул по 500 мг</p>
+                      <p class="main__pills__description-faded">
+                        1 місяць прийому
+                      </p>
+                    </div>
+                  </div>
+                  <div class="main__pills__price">
+                    <p class="main__pills__price-old">963 ₴</p>
+                    <p class="main__pills__price-new">489 ₴</p>
+                  </div>
+                </div>
+                <div class="main__add">
+                  <div class="counter">
+                  <div
+                    role="group"
+                    lang="ru"
+                    tabindex="-1"
+                    class="b-form-spinbutton form-control d-inline-flex align-items-stretch "
+                  >
+                    <button
+                      tabindex="-1"
+                      type="button"
+                      aria-controls="sb-inline"
+                      aria-label="Decrement"
+                      aria-keyshortcuts="ArrowDown"
+                      class="btn btn-sm border-0 rounded-0 py-0"
+                      @click="onDecrementItem"
+                    >
+                      <svg
+                        viewBox="0 0 16 16"
+                        width="1em"
+                        height="1em"
+                        focusable="false"
+                        role="img"
+                        aria-label="dash"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi-dash b-icon bi"
+                      >
+                        <g
+                          transform="translate(8 8) scale(1.25 1.25) translate(-8 -8)"
+                        >
+                          <path
+                            d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                    <input 
+                      v-model.number="itemCount" 
+                      v-on:keypress="checkNumbersOnly" 
+                      @paste.prevent 
+                      class="flex-grow-1 align-self-center main__inp" 
+                    />
+                    <button
+                      tabindex="-1"
+                      type="button"
+                      aria-controls="sb-inline"
+                      aria-label="Increment"
+                      aria-keyshortcuts="ArrowUp"
+                      class="btn btn-sm border-0 rounded-0 py-0"
+                      @click="onIncrementItem"
+                    >
+                      <svg
+                        viewBox="0 0 16 16"
+                        width="1em"
+                        height="1em"
+                        focusable="false"
+                        role="img"
+                        aria-label="plus"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi-plus b-icon bi"
+                      >
+                        <g
+                          transform="translate(8 8) scale(1.25 1.25) translate(-8 -8)"
+                        >
+                          <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                  </div></div>
+                  <button
+                    type="button"
+                    tabindex="0"
+                    class="btn btn-success"
+                    data-bs-toggle="button"
+                    @click="addToBag($event)"
+                  >
+                    До кошика
+                  </button>
+                   <button
+                    type="button"
+                    tabindex="0"
+                    class="btn btn-success-mobile"
+                    data-bs-toggle="button"
+                    @click="addToBag($event)"
+                  >
+                    До кошика — 489 ₴
+                  </button>
+                </div></div>
+              </div>
           </div>
         </div>
         <div class="main__img">
@@ -674,6 +1152,7 @@ export default {
         currentTab: 'description',
         slide: 0,
         isCollapsed: false,
+        isMobile: false,
       }
     },
   components: {
@@ -716,7 +1195,22 @@ export default {
 
         return true;
       }
-    }
+         },
+    onResize() {
+      if (window.innerWidth > 610) {
+        this.isMobile = false
+      } else {
+        this.isMobile = true
+      }
+    },
   },
-}
+  
+  mounted() {
+    window.addEventListener('resize', this.onResize)
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
+  },
+    }
 </script>
